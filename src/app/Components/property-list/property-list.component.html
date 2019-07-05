@@ -1,0 +1,25 @@
+<div class="container">
+        <h3>Argus Properties</h3>
+        <hr />
+        <div class=table>
+          <div class="table-header">
+            <div class="header-col">Property Name</div>
+            <div class="header-col">Rentable Area</div>
+            <div class="header-col"></div>
+          </div>
+          
+          <div class="table-data" *ngIf="propertyList.properties">
+            <div class="colWrap" *ngFor="let prop of propertyList.properties">
+              <div class="data-col">
+                {{prop.propertyAddress}}
+              </div>
+              <div class="data-col">
+                {{prop.propertyName}}
+              </div>      
+              <div class="data-col">
+                  <a [routerLink]="['/property-assess', prop.propertyId]" class="button">View</a>
+              </div>
+            </div>
+          </div>
+        </div>  
+  </div>

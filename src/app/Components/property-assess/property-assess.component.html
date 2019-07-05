@@ -1,0 +1,45 @@
+
+<div class="container">
+    <h3>Argus Assess</h3> 
+    <hr />
+    <h4>{{property.propertyName}} of {{property.propertyAddress}}</h4>
+
+    <div class="box">
+        <div class="box-title">
+            <span>Occupancy</span>
+        </div>
+        <div class="box-body">
+            <div class="progress">
+                <progress value="{{property.occupancy }}" max="100" class="progressBar"></progress>
+                <br />
+                <span *ngIf="tenant.TenantArea > 0">SqFt {{tenant.TenantArea}} ( {{property.occupancy | number : '1.2-2'  }}%)</span>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="box">
+        <div class="div-container">
+            <div class="div-row">
+                <div class="div-col-2"><h4>Property</h4></div>
+                <div class="div-col-2"><h4>Tenant</h4></div>                
+            </div>
+            <div class="div-row">
+                <div class="div-col-4">Property Name</div>
+                <div class="div-col-4">{{property.propertyName}}</div>
+
+                <div class="div-col-4">Tenant Name</div>
+                <div class="div-col-4"><input type="text" [(ngModel)]="tenant.TenantName" class="text-box"></div>
+            </div>
+            <div class="div-row">
+                <div class="div-col-4">Rentable Area (SqFt)</div>
+                <div class="div-col-4">{{property.propertyArea }}</div>
+
+                <div class="div-col-4">Tenant Area (SqFt)</div>
+                <div class="div-col-4"><input type="number" max="{{property.propertyArea}}" (keydown)="processOccupancy()" [(ngModel)]="tenant.TenantArea" class="text-box text-box-right"></div>
+            </div>
+        </div>
+    </div>
+    <a [routerLink]="['/']">Go Back</a>
+</div>

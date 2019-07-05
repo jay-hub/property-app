@@ -1,0 +1,118 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.container{
+    width: 800px;
+    margin: 0 auto;
+}
+
+h3{
+    font-size: 3em;
+    margin: 20px 5px 5px 20px
+}
+
+h4{
+    font-size: 1em;
+    margin: 0px 0px 10px 0px
+}
+
+.table{
+    margin: 30px;
+}
+
+.table-header, .table-data{
+    margin-top:5px;
+}
+
+.header-col{
+    font-weight: 700;
+    
+}
+
+.header-col, .data-col{
+    float: left;
+    width: 33%;
+}
+
+.table-header:after{
+    content:"";
+    display: flex;
+    clear:both;
+} 
+
+.table-data:after{
+    content:"";
+    display: flex;
+    clear:both;
+}
+
+.colWrap{
+    margin-top: 15px;
+    padding-top: 20px;
+}
+
+.button{
+    background-color: #2196F3;
+    width: 100px;   
+    padding:3px 25px 3px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    border-color: gray;
+    border-style: outset
+}
+
+.button:hover{
+    background-color: teal;
+}
+
+.progressBar{
+    padding: 20px;
+    width: 500px;
+}
+
+.box {
+    border-radius: 1pt;
+    border-style: solid;
+    padding: 30px;
+    display: block; clear: both;
+    overflow: hidden;
+}
+
+.box::after{
+    display: block; clear: both;
+}
+
+.div-row{
+    display: inline;
+    overflow: hidden;
+}
+
+.div-row::after{
+    display: block; clear: both;
+}
+
+.div-col-4{
+    width: 25%;
+    display: flex;
+    float: left;
+    padding-bottom: 5px;
+}
+
+.div-col-2{
+    width: 50%;
+    display: flex;
+    float: left;
+}
+
+.box-title{
+    padding-bottom: 10px;
+}
+
+.text-box{
+    width: 300px;
+}
+
+.text-box-right{
+    text-align: right;
+}
